@@ -69,6 +69,11 @@ case $( arch ) in
         zypper ar http://download.opensuse.org/ports/zsystems/tumbleweed/repo/oss/ oss
         zypper ar http://download.opensuse.org/ports/zsystems/tumbleweed/repo/non-oss/ non-oss
         ;;
+    ppc64le ) echo "Adding repos for ppc64le"
+        zypper ar http://download.opensuse.org/ports/ppc/tumbleweed/repo/oss/ oss
+        zypper ar http://download.opensuse.org/ports/ppc/tumbleweed/repo/non-oss/ non-oss
+        zypper ar http://download.opensuse.org/ports/ppc/update/tumbleweed/ update
+        ;;
     * )     echo "No repos for $arch"
         ;;
 esac
